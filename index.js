@@ -26,16 +26,21 @@ function generatePassword() {
     return;
   }
   let majCount = false;
+  i = 0;
   while (i < alphabetmaj.length && !majCount) {
+    console.log(alphabetmaj[i], value)
     majCount = value.includes(alphabetmaj[i]);
     i++;
   }
+  console.log(majCount)
   if (!majCount) {
+    console.log(value,)
     error.innerHTML = "Password must contain at least one uppercase letter.";
     error.style.display = "block";
     return;
   }
   error.style.display = "none";
+  registerUser()
 }
 
 // Sélection des éléments HTML
